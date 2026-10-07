@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe Ultimate Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- INTRO SCREEN -->
+    <section id="introScreen" class="screen intro-screen">
+        <div class="intro-content">
+            <h1>TicTacToe</h1>
+            <h2>IDHU ENGA EDITION</h2>
+            <p>Vanga Velayaduvom!</p>
+        </div>
+    </section>
+
+    <!-- HOME SCREEN -->
+    <section id="homeScreen" class="screen hidden">
+
+        <div class="home-container">
+
+            <div class="logo">
+                <span> Tic</span><span> Tac</span><span> Toe</span>
+            </div>
+
+            <h2>IDHU ENGA EDITION</h2>
+            <p class="subtitle">Choose your game mode</p>
+
+            <div class="menu-buttons">
+
+                <button id="twoPlayerBtn" class="menu-btn">
+                    <span>👥</span>
+                    <div>
+                        <strong>2 Players</strong>
+                        <small>Play with your friend</small>
+                    </div>
+                </button>
+
+                <button id="aiBtn" class="menu-btn">
+                    <span>🤖</span>
+                    <div>
+                        <strong>You vs AI</strong>
+                        <small>Challenge the computer</small>
+                    </div>
+                </button>
+
+            </div>
+
+            <!-- AI DIFFICULTY -->
+            <div id="difficultyBox" class="difficulty hidden">
+
+                <h3>Select Difficulty</h3>
+
+                <div class="difficulty-buttons">
+                    <button data-level="easy">Easy</button>
+                    <button data-level="medium">Medium</button>
+                    <button data-level="hard">Hard</button>
+                    <button data-level="impossible">Impossible</button>
+                </div>
+
+            </div>
+
+            <!-- THEME -->
+            <div class="theme-control">
+                <button id="themeBtn">🌙 Dark Mode</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GAME SCREEN -->
+    <section id="gameScreen" class="screen hidden">
+
+        <div class="game-container">
+
+            <div class="game-header">
+
+                <button id="backBtn" class="small-btn">← Back</button>
+
+                <div>
+                    <h1>TicTacToe</h1>
+                    <p id="modeText">2 Players</p>
+                </div>
+
+                <button id="restartBtn" class="small-btn">↻ Restart</button>
+
+            </div>
+
+
+            <div class="score-board">
+
+                <div class="score-card player-x">
+                    <span>PLAYER X</span>
+                    <strong id="scoreX">0</strong>
+                </div>
+
+                <div class="turn">
+                    <span id="turnText">X's Turn</span>
+                </div>
+
+                <div class="score-card player-o">
+                    <span id="playerOLabel">PLAYER O</span>
+                    <strong id="scoreO">0</strong>
+                </div>
+
+            </div>
+
+
+            <!-- BOARD -->
+            <div id="board" class="board">
+
+                <button class="cell" data-index="0"></button>
+                <button class="cell" data-index="1"></button>
+                <button class="cell" data-index="2"></button>
+
+                <button class="cell" data-index="3"></button>
+                <button class="cell" data-index="4"></button>
+                <button class="cell" data-index="5"></button>
+
+                <button class="cell" data-index="6"></button>
+                <button class="cell" data-index="7"></button>
+                <button class="cell" data-index="8"></button>
+
+            </div>
+
+
+            <div id="resultBox" class="result-box hidden">
+
+                <h2 id="resultTitle">X Wins!</h2>
+                <p id="resultMessage">Great game!</p>
+
+                <button id="playAgainBtn">Play Again</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
